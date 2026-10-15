@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- [ส่วนแก้ไขข้อมูล SEO และชื่อแท็บเบราว์เซอร์] -->
+  <title>อาหารตุรกี 5 เมนูเลื่องชื่อ - รสแท้แห่งเอเชีย</title>
+  <meta name="description" content="สำรวจ 5 เมนูอาหารตุรกียอดนิยม อิสเคนเดอร์เคบับ บาคลาวา พีเด เมเนเมน และซุปถั่วเลนทิลแดง พร้อมประวัติและมรดกครัวพระราชวังออตโตมัน">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ลิงก์ไฟล์ CSS หลักที่ใช้ร่วมกันทุกหน้า -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       แถบเมนูนำทาง (NAVBAR)
+       ========================================================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-mark">✦</span>
+        <span>รสชาติแห่งเอเชีย</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+          <li><a href="vietnam.html" class="nav-link">เวียดนาม</a></li>
+          <li><a href="india.html" class="nav-link">อินเดีย</a></li>
+          <li><a href="indonesia.html" class="nav-link">อินโดนีเซีย</a></li>
+          <li><a href="turkey.html" class="nav-link active">ตุรกี</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         PAGE HERO: หัวหน้าเว็บรูปปก + ชื่อประเทศ + INTRO สั้น ๆ
+         ======================================================================= -->
+    <section class="page-hero">
+      <!-- [ส่วนแก้ไขรูปภาพพื้นหลังปกของประเทศ] -->
+      <img src="ตุรกี.webp" 
+           alt="ทิวทัศน์ช่องแคบบอสฟอรัสและสถาปัตยกรรมตุรกี" 
+           class="page-hero-bg">
+      <div class="page-hero-overlay"></div>
+
+      <div class="container page-hero-content">
+        <!-- [ส่วนแก้ไขคำโปรย] -->
+        <span class="page-hero-kicker">CUISINE OF TURKEY</span>
+        <!-- [ส่วนแก้ไขชื่อประเทศ] -->
+        <h1 class="page-hero-title">อาหารตุรกี</h1>
+        <!-- [ส่วนแก้ไขคำบรรยายเกริ่นนำสั้น ๆ] -->
+        <p class="page-hero-intro">
+          ชุมทางอารยธรรมสองทวีป มรดกครัวพระราชวังออตโตมันโบราณ 
+          ทักษะการย่างเนื้ออันพิถีพิถัน และความกลมกล่อมนุ่มนวลของน้ำมันมะกอก โยเกิร์ตสด และถั่วพิสตาชิโอ
+        </p>
+        <div>
+          <a href="#dishes" class="btn btn-outline" style="border-color: #E2B77E; color: #FAF8F5;">เลือกชม 5 เมนูแนะนำ ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: รายการอาหาร 5 เมนู (จัดเลย์เอาต์สลับซ้าย-ขวา)
+         ======================================================================= -->
+    <section id="dishes" class="dishes-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">SELECTED DISHES</span>
+          <h2 class="section-title">5 จานเด่นประจำชาติตุรกี</h2>
+          <p class="section-lead">
+            ลิ้มรสความล้ำค่าของอาหารที่ได้รับการยกย่องให้เป็นหนึ่งในสามมหาอำนาจด้านอาหารของโลกโบราณ
+          </p>
+        </div>
+
+        <div class="dishes-list">
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 1: อิสเคนเดอร์เคบับ (İskender Kebap)
+               ----------------------------------------------------------------- -->
+          <article class="dish-card">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 1] -->
+            <div class="dish-image-wrapper">
+              <img src="เคบับ.avif" 
+                   alt="อิสเคนเดอร์เคบับเนื้อย่างสไลซ์แผ่นบางราดซอสมะเขือเทศและเนยร้อนเสิร์ฟคู่โยเกิร์ต" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 01 · OTTOMAN MASTERPIECE</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">อิสเคนเดอร์เคบับ</h3>
+                <div class="dish-original-name">İskender Kebap (Bursa Kebab with Brown Butter)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    คิดค้นโดย อิสเคนเดอร์ เอเฟนดิ (İskender Efendi) แห่งเมืองบูร์ซา (Bursa) ในปี ค.ศ. 1867 
+                    ผู้ริเริ่มการย่างเนื้อแกะบนแกนหมุนแนวตั้ง เพื่อให้น้ำมันจากเนื้อไหลเคลือบชิ้นเนื้ออย่างทั่วถึง 
+                    ก่อนแล่เป็นแผ่นบางวางบนขนมปังพีตาหั่นเต๋า ราดซอสมะเขือเทศเข้มข้น และมีไฮไลต์คือการราดเนยแกะละลายเดือดพล่านลงบนจานต่อหน้าแขก
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    เนื้อแกะและเนื้อวัวนุ่มละลายในปาก หอมกลิ่นควันถ่าน ผสานความเค็มมันเข้มข้นของเนยร้อน 
+                    และความเปรี้ยวหวานของซอสมะเขือเทศ ตัดเลี่ยนได้อย่างลงตัวด้วยความเย็นสดชื่นของโยเกิร์ตตุรกีแท้
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    เนื้อแกะหรือเนื้อวัวสไลซ์บางย่างแกนหมุน, ขนมปังพิตา (Pide bread) หั่นเต๋าอบกรอบ, 
+                    ซอสมะเขือเทศตุรกีเคี่ยว, เนยสดละลายร้อน (Sarı yağ), โยเกิร์ตตุรกีเนื้อข้น (Süzme yoğurt), พริกย่าง
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 2: บาคลาวา (Baklava) - สลับด้านรูปอยู่ขวา
+               ----------------------------------------------------------------- -->
+          <article class="dish-card dish-reverse">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 2] -->
+            <div class="dish-image-wrapper">
+              <img src="บาคลาวา.jpg" 
+                   alt="บาคลาวาขนมอบแป้งฟิโลซ้อนชั้นประกบไส้ถั่วพิสตาชิโอสีเขียวสดชุ่มน้ำเชื่อม" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 02 · ROYAL DESSERT</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">บาคลาวา</h3>
+                <div class="dish-original-name">Baklava (Gaziantep Pistachio Filo Pastry)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    สุดยอดขนมหวานแห่งราชสำนักทอปกาปึ (Topkapı Palace) ที่สุลต่านจะพระราชทานให้แก่ทหารองค์รักษ์ 
+                    ในวันขึ้น 15 ค่ำ เดือนรอมฎอน เมืองกาเซียนเทป (Gaziantep) คือเมืองหลวงแห่งบาคลาวา 
+                    เชฟต้องรีดแป้งฟิโลบางเฉียบโปร่งแสงซ้อนกันถึง 40 ชั้น สอดไส้ด้วยถั่วพิสตาชิโอเขียวมรกตเกรดพรีเมียม
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    สัมผัสกรอบร่วนแตะลิ้นแล้วแตกตัวเป็นชั้น ๆ หอมมันเนยบริสุทธิ์และถั่วพิสตาชิโอบดแน่นเต็มคำ 
+                    ชุ่มฉ่ำด้วยน้ำเชื่อมกลิ่นน้ำดอกไม้หรือกลิ่นกุหลาบ นิยมทานคู่กับชาตุรกีร้อนเพื่อตัดความหวาน
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    แป้งฟิโลรีดบางพิเศษ 40 ชั้น (Yufka), ถั่วพิสตาชิโอกาเซียนเทปบดหยาบ, 
+                    เนยใสคุณภาพสูง, น้ำเชื่อมเคี่ยวน้ำตาลผสมน้ำมะนาวและน้ำกลิ่นกุหลาบ
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 3: พีเด (Pide)
+               ----------------------------------------------------------------- -->
+          <article class="dish-card">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 3] -->
+            <div class="dish-image-wrapper">
+              <img src="พีเด.jpg" 
+                   alt="ขนมปังพีเดทรงเรืออบร้อนจากเตาถ่านหน้าเนื้อสับเครื่องเทศและชีสละลาย" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 03 · TURKISH PIZZA</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">พีเด</h3>
+                <div class="dish-original-name">Pide (Turkish Boat-Shaped Flatbread)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    ขนมปังแบนทรงเรืออันเป็นเอกลักษณ์ที่มีต้นกำเนิดจากภูมิภาคทะเลดำ (Black Sea region) ของตุรกี 
+                    มักเรียกกันว่า "พิซซ่าตุรกี" นิยมอบในเตาฟืนความร้อนสูงแบบดั้งเดิม โดยชาวประมงและคนงานในอดีต 
+                    นิยมพับขอบแป้งให้เป็นรูปทรงเรือเพื่อป้องกันไม่ให้ไส้เนื้อและชีสไหลออกมาขณะอบ
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    ขอบแป้งกรอบนอกนุ่มเหนียวหนึบ หอมกลิ่นควันฟืน หน้าเนื้อสับหมักรสเค็มกลมกล่อมผสานพริกหวาน 
+                    ชีสคัชการ์ (Kaşar cheese) เยิ้มยืด และไข่ไก่ดิบที่ตอกลงไปอบจนไข่แดงเยิ้มเป็นซอสธรรมชาติ
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    แป้งโดว์หมักยีสต์, เนื้อวัวหรือเนื้อแกะสับ (Kıymalı), มะเขือเทศสับ, พริกหยวกเขียว, 
+                    ชีสตุรกีคัชการ์ (Kaşar), ไข่ไก่, พาร์สลีย์สด, เนยสดปาดขอบแป้ง
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 4: เมเนเมน (Menemen) - สลับด้านรูปอยู่ขวา
+               ----------------------------------------------------------------- -->
+          <article class="dish-card dish-reverse">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 4] -->
+            <div class="dish-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop&q=80" 
+                   alt="เมเนเมนไข่กวนกระทะร้อนตุรกีสีแดงส้มเสิร์ฟในกระทะทองแดงพร้อมขนมปังอบ" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 04 · BREAKFAST ESSENTIAL</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">เมเนเมน</h3>
+                <div class="dish-original-name">Menemen (Turkish Scrambled Eggs with Tomatoes)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    หัวใจสำคัญของโต๊ะอาหารเช้าตุรกี (Kahvaltı) ตั้งชื่อตามอำเภอเมเนเมนในจังหวัดอิซมีร์ (İzmir) 
+                    โดยชาวเติร์กที่อพยพมาจากเกรตเป็นผู้นำมะเขือเทศและพริกมาปรุงร่วมกับไข่ เป็นเมนูที่สะท้อนความเรียบง่าย 
+                    แต่มอบคุณค่าสารอาหารครบถ้วน
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    ไข่เนื้อนุ่มฉ่ำไม่แห้ง (Soft & Juicy) รสชาติหวานอมเปรี้ยวตามธรรมชาติของมะเขือเทศสุกเคี่ยว 
+                    ผสานความหอมสดชื่นของพริกเขียวและน้ำมันมะกอก อร่อยที่สุดเมื่อใช้ขนมปังกรอบจิ้มตักกินจากกระทะทองแดง
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    ไข่ไก่สด, มะเขือเทศสุกปอกเปลือกสับ, พริกเขียวตุรกี (Sivri biber), 
+                    น้ำมันมะกอกบริสุทธิ์, เกลือ, พริกไทยดำ, ผงออริกาโนแห้ง, เนยสด
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 5: เมอร์จิเมก ชอร์บาซือ (Mercimek Çorbası)
+               ----------------------------------------------------------------- -->
+          <article class="dish-card">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 5] -->
+            <div class="dish-image-wrapper">
+              <img src="เมอร์จิเมก.webp" 
+                   alt="ชามซุปถั่วเลนทิลแดงสีส้มละมุนโรยพริกป่นตุรกีและใบมินต์เคียงด้วยมะนาวสด" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 05 · COMFORT LENTIL SOUP</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">เมอร์จิเมก ชอร์บาซือ</h3>
+                <div class="dish-original-name">Mercimek Çorbası (Red Lentil Soup)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    หนึ่งในอาหารที่เก่าแก่ที่สุดของชาวตุรกี มีประวัติตั้งแต่สมัยชนเผ่าเร่ร่อนในอนาโตเลีย 
+                    ถั่วเลนทิลแดงเป็นพืชเพาะปลูกยุคแรกเริ่มของมนุษยชาติ ซุปนี้จึงเปรียบเสมือนจิตวิญญาณแห่งการต้อนรับ 
+                    เป็นจานแรกที่เสิร์ฟในทุกร้านอาหารและเป็นอาหารหลักในการละศีลอดช่วงรอมฎอน
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    เนื้อซุปเนียนข้นนุ่มนวล รสสัมผัสละมุนอุ่นสบายท้อง ชูรสด้วยการบีบมะนาวเหลืองสดลงไป 
+                    และราดด้วยซอสเนยผัดพริกป่นปูเลบีเบอร์ (Pul biber) กับสะระแหน่แห้งหอมสดชื่น
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    ถั่วเลนทิลสีแดง (Kırmızı mercimek), หัวหอมใหญ่, แครอท, มันฝรั่ง, น้ำสต๊อกไก่หรือผัก, 
+                    เนยสดเคี่ยวพริกป่นตุรกี (Pul biber), ใบมินต์แห้ง, มะนาวเลมอนสด
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- กล่องนำทางหน้าถัดไป -->
+        <div style="margin-top: 4.5rem; text-align: center; padding-top: 2.5rem; border-top: 1px solid var(--border-subtle);">
+          <span style="display: block; font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem;">ทำความรู้จักผู้สร้างสรรค์เว็บไซต์</span>
+          <a href="about.html" class="btn btn-primary btn-arrow">ไปยังหน้าคณะผู้จัดทำ (About Us)</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>รสชาติแห่งเอเชีย</h4>
+          <p>คัดสรรเมนูอาหารเอเชีย 4 ประเทศ ครบทั้งรสชาติ เอกลักษณ์ที่น่าค้นหา</p>
+        </div>
+        <div>
+          <div class="footer-nav-title">หน้าอาหาร 4 ประเทศ</div>
+          <ul class="footer-nav-links">
+            <li><a href="vietnam.html">อาหารเวียดนาม</a></li>
+            <li><a href="india.html">อาหารอินเดีย</a></li>
+            <li><a href="indonesia.html">อาหารอินโดนีเซีย</a></li>
+            <li><a href="turkey.html">อาหารตุรกี</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-nav-title">ข้อมูลโครงงาน</div>
+          <ul class="footer-nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 รสชาติแห่งเอเชีย - โครงงานพัฒนาเว็บไซต์รายวิชา Web Design For Information Work</p>
+        <p>พัฒนาด้วย Google AI Studio, HTML, CSS และ VS CODE</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

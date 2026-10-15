@@ -1,0 +1,1072 @@
+/* ==========================================================================
+   STYLE.CSS - เว็บไซต์แนะนำวัฒนธรรมอาหาร 4 ประเทศ (รสแท้แห่งเอเชีย)
+   สไตล์: Minimal Premium (โทนสีครีม ขาวนวล ดำถ่าน และทองหม่น)
+   ใช้ร่วมกันทุกหน้า: index.html, vietnam.html, india.html, indonesia.html, turkey.html, about.html
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS VARIABLES (แก้ธีม สี ฟอนต์ ได้อย่างง่ายดายที่จุดนี้)
+   -------------------------------------------------------------------------- */
+:root {
+  /* [ส่วนแก้ไขธีมสีหลัก] */
+  --bg-body: #FBF9F5;          /* สีพื้นหลังของเว็บ (สีครีมนวล / ขาวงาช้าง) */
+  --bg-card: #FFFFFF;          /* สีพื้นหลังการ์ดและกล่องข้อมูล (สีขาวบริสุทธิ์) */
+  --bg-subtle:#F4EFEA;     /* สีพื้นหลังส่วนไฮไลต์รอง (สีเบจอ่อน) */
+  --bg-dark: #1A1715;          /* สีพื้นหลังส่วนสีเข้ม / Footer (สีดำถ่านคลาสสิก) */
+  --bg-glass:rgba(255, 227, 172, 0.92); /* พื้นหลังกึ่งโปร่งใสของแถบเมนูนำทาง */
+
+  /* [ส่วนแก้ไขสีข้อความ] */
+  --text-main: #1D1917;        /* สีข้อความหลัก (สีเทาดำเข้ม อ่านง่าย สบายตา) */
+  --text-muted: #57524C;       /* สีข้อความเนื้อหารอง (สีเทาอบอุ่น) */
+  --text-light: #7E7870;       /* สีข้อความคำบรรยายขนาดเล็ก / เครดิต */
+  --text-inverse: #FAF8F5;     /* สีข้อความบนพื้นหลังสีเข้ม */
+
+  /* [ส่วนแก้ไขสีเน้น - สีทองหม่น / น้ำตาลบรอนซ์] */
+  --accent-gold: #9E6B34;      /* สีเน้นสีทองหม่นพรีเมียม */
+  --accent-gold-hover: #7F5426;/* สีเน้นเมื่อนำเมาส์ไปชี้ (Hover) */
+  --accent-gold-soft: #F5EEE4; /* สีพื้นหลังทองอ่อนละมุน */
+  --accent-border: #DDC8B1;    /* สีกรอบเส้นไฮไลต์สีทอง */
+
+  /* [ส่วนแก้ไขเส้นขอบและเงา] */
+  --border-subtle: #E8E2D9;    /* เส้นขอบบางสบายตา */
+  --border-card: #ECE6DD;      /* เส้นขอบการ์ด */
+  --shadow-sm: 0 2px 8px rgba(29, 25, 23, 0.04);
+  --shadow-md: 0 8px 24px rgba(29, 25, 23, 0.07);
+  --shadow-lg: 0 16px 36px rgba(29, 25, 23, 0.10);
+
+  /* [ส่วนแก้ไขฟอนต์] */
+  --font-heading: 'Noto Serif Thai', 'Times New Roman', serif; /* ฟอนต์หัวข้อหรูหรา */
+  --font-body: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif; /* ฟอนต์เนื้อหาอ่านง่าย */
+
+  /* [ส่วนแก้ไขรูปทรงและรัศมีขอบมน] */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  /* การเปลี่ยนผ่านของแอนิเมชัน */
+  --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --max-width: 1200px;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & BASE TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-bottom: 1.15rem;
+  color: var(--text-muted);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   3. LAYOUT UTILITIES
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-padding {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-kicker {
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.6rem;
+  display: inline-block;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.section-lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION BAR (โปร่งใส เรียบหรู ใช้งานได้ทุกหน้า)
+   -------------------------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0.02em;
+}
+
+.nav-brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--accent-gold), #B37D45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  position: relative;
+  padding: 0.4rem 0;
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+}
+
+.nav-link.active {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-gold);
+  border-radius: var(--radius-full);
+}
+
+/* เมนูบนมือถือ - เลื่อนในแนวนอนอย่างนุ่มนวลไม่ต้องพึ่ง JS */
+@media (max-width: 768px) {
+  .nav-container {
+    height: auto;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .nav-links {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 0.35rem;
+    gap: 1.25rem;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. BUTTONS (ปุ่มดูเมนูอาหาร & ปุ่มกดพรีเมียม)
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-gold-hover);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background-color: var(--accent-gold-soft);
+}
+
+.btn-arrow::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.btn-arrow:hover::after {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   6. HERO SECTION (หน้าแรก)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+  background-color: var(--bg-body);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.25;
+  filter: saturate(1.15) contrast(1.05);
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 25%, rgba(251, 249, 245, 0.7) 0%, rgba(251, 249, 245, 0.94) 85%);
+  pointer-events: none;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.hero-kicker {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+  color: var(--text-main);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. COUNTRY SECTIONS ON INDEX.HTML (2 คอลัมน์ สลับซ้าย-ขวา)
+   -------------------------------------------------------------------------- */
+.country-section {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.country-section:nth-child(even) {
+  background-color: rgba(244, 239, 234, 0.4);
+}
+
+.country-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* สลับด้านซ้าย-ขวาสำหรับแถวที่เป็นคู่ */
+.country-section.row-reverse .country-row {
+  direction: rtl;
+}
+
+.country-section.row-reverse .country-row > * {
+  direction: ltr;
+}
+
+.country-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-badge-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.country-title {
+  font-size: 2.25rem;
+  color: var(--text-main);
+}
+
+.country-name-en {
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-style: italic;
+}
+
+.country-narrative {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+/* Fact Box (กล่องข้อมูลย่อ 3 ข้อ) */
+.fact-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.fact-box-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.fact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.fact-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  gap: 0.5rem;
+}
+
+.fact-label {
+  font-weight: 600;
+  color: var(--text-main);
+  min-width: 95px;
+  flex-shrink: 0;
+}
+
+.fact-value {
+  color: var(--text-muted);
+}
+
+/* รูปประกอบของแต่ละประเทศ (ขนาดกะทัดรัด สัดส่วนภาพสมดุล ไม่ยืด) */
+.country-media-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.media-card-single {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  transition: var(--transition);
+}
+
+.media-card-single:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.media-card-single img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.media-card-single:hover img {
+  transform: scale(1.03);
+}
+
+.media-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(20, 18, 16, 0.88), transparent);
+  color: #FFFFFF;
+  padding: 1.75rem 1.25rem 0.85rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   8. COMPARISON TABLE SECTION (ตารางเปรียบเทียบมิติรสชาติ 4 ประเทศ)
+   -------------------------------------------------------------------------- */
+.comparison-section {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  background-color: var(--bg-card);
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  background-color: #FFFFFF;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+  min-width: 720px;
+}
+
+.comparison-table th {
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 1.1rem 1.4rem;
+  border-bottom: 2px solid var(--border-subtle);
+  letter-spacing: 0.02em;
+}
+
+.comparison-table td {
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover td {
+  background-color: rgba(245, 238, 228, 0.35);
+}
+
+.td-country {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.td-country span {
+  display: block;
+  font-size: 0.8rem;
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   9. COUNTRY DETAIL PAGE HERO (หน้าอาหารแต่ละประเทศ)
+   -------------------------------------------------------------------------- */
+.page-hero {
+  position: relative;
+  background-color: var(--bg-dark);
+  color: #FFFFFF;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.32;
+  filter: saturate(1.1);
+}
+
+.page-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(26, 23, 21, 0.45) 0%, rgba(26, 23, 21, 0.9) 100%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-hero-kicker {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #E2B77E;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.page-hero-title {
+  font-size: 3.25rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.page-hero-intro {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #D6D0C7;
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. DISH CARDS (รายการอาหาร 5 เมนูในหน้าประเทศ)
+   -------------------------------------------------------------------------- */
+.dishes-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.dishes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.dish-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  transition: var(--transition);
+}
+
+.dish-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-border);
+}
+
+/* สลับด้านซ้าย-ขวาสำหรับเมนูเลขคู่ */
+.dish-card.dish-reverse {
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.dish-card.dish-reverse .dish-image-wrapper {
+  order: 2;
+}
+
+.dish-card.dish-reverse .dish-info {
+  order: 1;
+}
+
+.dish-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.dish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.dish-card:hover .dish-image {
+  transform: scale(1.04);
+}
+
+.dish-info {
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dish-header {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1rem;
+}
+
+.dish-number {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent-gold);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.dish-title {
+  font-size: 1.85rem;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.dish-original-name {
+  font-size: 1.05rem;
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.dish-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dish-detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dish-detail-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+}
+
+.dish-detail-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   11. ABOUT US PAGE (หน้าผู้จัดทำ 4 คน)
+   -------------------------------------------------------------------------- */
+.about-hero {
+  text-align: center;
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+  background: radial-gradient(circle at 50% 0%, rgba(245, 238, 228, 0.7) 0%, var(--bg-body) 70%);
+}
+
+.about-team-section {
+  padding-top: 1.5rem;
+  padding-bottom: 5.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.member-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  padding-bottom: 1.35rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-border);
+}
+
+.member-photo-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--bg-subtle);
+  position: relative;
+  margin-bottom: 1.15rem;
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover .member-photo {
+  transform: scale(1.05);
+}
+
+.member-info {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.member-id {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
+  font-family: monospace, var(--font-body);
+}
+
+/* --------------------------------------------------------------------------
+   12. FOOTER (ท้ายเว็บเรียบหรู)
+   -------------------------------------------------------------------------- */
+.footer {
+  margin-top: auto;
+  background-color: var(--bg-dark);
+  color: var(--text-inverse);
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand h4 {
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-brand p {
+  color: #A8A29E;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+.footer-nav-title {
+  color: #E2B77E;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.footer-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-nav-links a {
+  color: #D6D0C7;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-nav-links a:hover {
+  color: #FFFFFF;
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #78716C;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. RESPONSIVE DESIGN (รองรับทั้งมือถือ แท็บเล็ต และคอมพิวเตอร์)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  
+  .country-row {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .country-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* ในมือถือ ให้เนื้อหาแสดงลำดับปกติ */
+  .country-section.row-reverse .country-row {
+    direction: ltr;
+  }
+
+  .country-media-col {
+    order: -1; /* ให้รูปอยู่ข้างบนเนื้อหาในมือถือ */
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .media-card-single {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 10;
+    min-height: auto;
+    height: auto;
+  }
+
+  .dish-card,
+  .dish-card.dish-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .dish-card.dish-reverse .dish-image-wrapper {
+    order: 0;
+  }
+
+  .dish-card.dish-reverse .dish-info {
+    order: 1;
+  }
+
+  .dish-image-wrapper {
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  .dish-info {
+    padding: 1.5rem;
+  }
+
+  .about-hero {
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .about-team-section {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    max-width: 100%;
+  }
+
+  .member-card {
+    padding-bottom: 1rem;
+  }
+
+  .member-info {
+    padding: 0 0.5rem;
+  }
+
+  .member-name {
+    font-size: 0.95rem;
+  }
+
+  .member-id {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- [ส่วนแก้ไขข้อมูล SEO และชื่อแท็บเบราว์เซอร์] -->
+  <title>อาหารอินโดนีเซีย 5 เมนูเลื่องชื่อ - รสชาติแห่งเอเชีย</title>
+  <meta name="description" content="สำรวจ 5 เมนูอาหารอินโดนีเซียยอดนิยม เรนดังเนื้อ นาซีกอเร็ง ซาเต๊ะไก่ กาโดกาโด และโซโตอายัม พร้อมประวัติ วัตถุดิบ และรสชาติอันจัดจ้าน">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@400;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ลิงก์ไฟล์ CSS หลักที่ใช้ร่วมกันทุกหน้า -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       แถบเมนูนำทาง (NAVBAR)
+       ========================================================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-mark">✦</span>
+        <span>รสชาติแห่งเอเชีย</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+          <li><a href="vietnam.html" class="nav-link">เวียดนาม</a></li>
+          <li><a href="india.html" class="nav-link">อินเดีย</a></li>
+          <li><a href="indonesia.html" class="nav-link active">อินโดนีเซีย</a></li>
+          <li><a href="turkey.html" class="nav-link">ตุรกี</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         PAGE HERO: หัวหน้าเว็บรูปปก + ชื่อประเทศ + INTRO สั้น ๆ
+         ======================================================================= -->
+    <section class="page-hero">
+      <!-- [ส่วนแก้ไขรูปภาพพื้นหลังปกของประเทศ] -->
+      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1600&auto=format&fit=crop&q=80" 
+           alt="ทิวทัศน์ธรรมชาติและวัดโบราณในประเทศอินโดนีเซีย" 
+           class="page-hero-bg">
+      <div class="page-hero-overlay"></div>
+
+      <div class="container page-hero-content">
+        <!-- [ส่วนแก้ไขคำโปรย] -->
+        <span class="page-hero-kicker">CUISINE OF INDONESIA</span>
+        <!-- [ส่วนแก้ไขชื่อประเทศ] -->
+        <h1 class="page-hero-title">อาหารอินโดนีเซีย</h1>
+        <!-- [ส่วนแก้ไขคำบรรยายเกริ่นนำสั้น ๆ] -->
+        <p class="page-hero-intro">
+          มรดกเครื่องเทศหมู่เกาะมากมาย รสชาติเข้มข้นจัดจ้าน จากพริกแกงบุมบู 
+          ดินแดนที่ผสานความเผ็ดร้อนของซัมบัลเข้ากับความหวานนุ่มลึกของซีอิ๊วเคจัปมานิสได้อย่างลงตัว
+        </p>
+        <div>
+          <a href="#dishes" class="btn btn-outline" style="border-color: #E2B77E; color: #FAF8F5;">เลือกชม 5 เมนูแนะนำ ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION: รายการอาหาร 5 เมนู (จัดเลย์เอาต์สลับซ้าย-ขวา)
+         ======================================================================= -->
+    <section id="dishes" class="dishes-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">SELECTED DISHES</span>
+          <h2 class="section-title">5 จานเด่นประจำชาติอินโดนีเซีย</h2>
+          <p class="section-lead">
+            เปิดตำนานอาหารที่ได้รับการโหวตว่าอร่อยที่สุดในโลก และเมนูท้องถิ่นที่เปี่ยมด้วยจิตวิญญาณแห่งสายน้ำและผืนดิน
+          </p>
+        </div>
+
+        <div class="dishes-list">
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 1: เรนดังเนื้อ (Rendang Daging)
+               ----------------------------------------------------------------- -->
+          <article class="dish-card">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 1] -->
+            <div class="dish-image-wrapper">
+              <img src="เรนดังเนื้อ.jpg" 
+                   alt="เรนดังเนื้อชิ้นโตเคี่ยวกะทิเครื่องเทศจนงวดสีน้ำตาลเข้มมันวาว" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 01 · WORLD NO. 1 DISH</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">เรนดังเนื้อ</h3>
+                <div class="dish-original-name">Rendang Daging (Minangkabau Beef Rendang)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    กำเนิดจากชนเผ่ามีนังกาเบา (Minangkabau) ในสุมาตราตะวันตก เดิมเป็นภูมิปัญญาถนอมอาหาร 
+                    สำหรับการเดินทางรอนแรมไกล โดยนำเนื้อวัวมาเคี่ยวกับกะทิและเครื่องเทศสมุนไพรนานหลายชั่วโมงจนน้ำระเหยหมด 
+                    เหลือน้ำมันมะพร้าวเคลือบเนื้อจนเป็นสีน้ำตาลเข้ม สามารถเก็บไว้ได้นานนับเดือนโดยไม่บูดเสีย 
+                    และเคยได้รับเลือกจาก CNN ให้เป็นอาหารที่อร่อยที่สุดในโลก
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    เนื้อวัวเปื่อยนุ่มชุ่มฉ่ำ รสชาติเข้มข้นลึกซึ้ง หอมมันกะทิคั่ว เผ็ดร้อนกลมกล่อมจากตะไคร้ ข่า และใบขมิ้น 
+                    รสเค็มหวานพอดี ซึมลึกเข้าสู่ทุกอณูของเนื้อ
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    เนื้อวัวส่วนสะโพกหรือสันคอ, หัวกะทิคั้นสดเข้มข้น, ตะไคร้ทุบ, ข่า, ใบมะกรูด, 
+                    ใบขมิ้น, ส้มแขก (Asam gelugur), พริกชี้ฟ้าแดง, หอมแดง, กระเทียม
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 2: นาซีกอเร็ง (Nasi Goreng) - สลับด้านรูปอยู่ขวา
+               ----------------------------------------------------------------- -->
+          <article class="dish-card dish-reverse">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 2] -->
+            <div class="dish-image-wrapper">
+              <img src="นาซีกอเร็ง.jpg" 
+                   alt="นาซีกอเร็งข้าวผัดอินโดนีเซียสีน้ำตาลทองโปะไข่ดาวกรอบเคียงด้วยแตงกวาและมะเขือเทศ" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 02 · NATIONAL FRIED RICE</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">นาซีกอเร็ง</h3>
+                <div class="dish-original-name">Nasi Goreng (Indonesian Spiced Fried Rice)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    มีจุดเริ่มต้นจากชาวจีนอพยพที่นำเทคนิคการผัดข้าวเข้ามาในอินโดนีเซีย แต่ชาวท้องถิ่นได้สร้างอัตลักษณ์ใหม่ 
+                    โดยนำ <strong>ซีอิ๊วหวานเคจัปมานิส (Kecap Manis)</strong> และ <strong>กะปิอินโดนีเซีย (Terasi)</strong> 
+                    มาผัดคลุกเคล้าจนได้ข้าวผัดที่มีสีเข้มสวยงามและกลิ่นหอมเฉพาะตัว กลายเป็นอาหารประจำชาติยอดนิยมทุกชนชั้น
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    หวานเค็มกลมกล่อม หอมกลิ่นกระทะไหม้เบา ๆ (Wok Hei) แฝงความเผ็ดและกลิ่นหอมอูมามิจากกะปิเผา 
+                    ทานคู่กับไข่ดาวขอบกรอบไข่แดงเยิ้ม และข้าวเกรียบกุ้ง (Kerupuk)
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    ข้าวสวยค้างคืน, ซีอิ๊วหวานเคจัปมานิส, พริกแกงบุมบู (พริกแดง หอมแดง กระเทียม), 
+                    กะปิอินโด (Terasi), เนื้อไก่หรือกุ้ง, ไข่ไก่, ต้นหอม, ข้าวเกรียบกุ้ง
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 3: ซาเต๊ะไก่ (Sate Ayam)
+               ----------------------------------------------------------------- -->
+          <article class="dish-card">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 3] -->
+            <div class="dish-image-wrapper">
+              <img src="ซาเต๊ะไก่.webp" 
+                   alt="ซาเต๊ะไก่เสียบไม้ย่างเตาถ่านราดน้ำจิ้มถั่วลิสงและซีอิ๊วหวานเคจัปมานิส" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 03 · CHARCOAL SKEWER</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">ซาเต๊ะไก่</h3>
+                <div class="dish-original-name">Sate Ayam (Javanese Chicken Satay)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    ถือกำเนิดขึ้นบนเกาะชวาช่วงต้นศตวรรษที่ 19 โดยได้รับแรงบันดาลใจจากเคบับของพ่อค้าชาวอาหรับ 
+                    แต่ชาวชวาได้นำมาดัดแปลงให้มีขนาดพอดีคำ เสียบก้านมะพร้าวหรือไม้ไผ่ ย่างบนรางเตาถ่านกะลามะพร้าว 
+                    และคิดค้นซอสถั่วลิสงรสชาติเข้มข้นจนแพร่หลายไปทั่วภูมิภาคเอเชียตะวันออกเฉียงใต้
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    เนื้อไก่นุ่มฉ่ำหอมกลิ่นควันถ่าน หมักรสหวานเค็มกลมกล่อม ราดด้วยซอสถั่วลิสงคั่วบดเนื้อเนียนมันนัว 
+                    หยดซีอิ๊วหวานและพริกซัมบัลสด บีบมะนาวกูเลา (Jeruk Limau) ช่วยเพิ่มความสดชื่น
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    เนื้อสะโพกไก่หมักผงลูกผักชีและซีอิ๊วหวาน, ถั่วลิสงคั่วบด, น้ำตาลมะพร้าว, กะทิ, 
+                    หอมแดงซอย, พริกขี้หนูสด, มะนาวลิเมา, ข้าวอัดก้อนลอนตง (Lontong)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 4: กาโดกาโด (Gado-Gado) - สลับด้านรูปอยู่ขวา
+               ----------------------------------------------------------------- -->
+          <article class="dish-card dish-reverse">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 4] -->
+            <div class="dish-image-wrapper">
+              <img src="กาโดกาโด.jpg" 
+                   alt="สลัดกาโดกาโดผักสดและลวกพร้อมเต้าหู้ทอดราดซอสถั่วลิสงข้น" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 04 · INDONESIAN SALAD</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">กาโดกาโด</h3>
+                <div class="dish-original-name">Gado-Gado (Warm Vegetable Salad with Peanut Sauce)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    คำว่า "Gado-gado" ในภาษาชวาแปลว่า "การผสมผสานหลายสิ่งเข้าด้วยกัน" 
+                    เป็นอาหารดั้งเดิมของชาวเบอตาวี (Betawi) ในจาการ์ตา สะท้อนถึงการบริโภคผลิตผลการเกษตรท้องถิ่น 
+                    ทั้งผักสด เต้าหู้ และ <strong>เทมเป้ (Tempeh)</strong> ถั่วเหลืองหมักภูมิปัญญาโบราณของอินโดนีเซีย
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    รสชาติหวานมันนัวจากน้ำสลัดถั่วลิสงผสานน้ำตาลมะพร้าวและน้ำมะขามเปียก 
+                    ตัดกับความกรุบกรอบของผักลวก ความมันโปรตีนสูงของไข่ต้มและเทมเป้ทอด อร่อยอิ่มท้องแบบสุขภาพดี
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    กะหล่ำปลีลวก, ถั่วฝักยาว, ถั่วงอก, มันฝรั่งต้ม, เต้าหู้ทอด, เทมเป้ทอดกรอบ (Tempeh), 
+                    ไข่ต้มผ่าซีก, ซอสถั่วลิสงปรุงรสมะขามเปียกและน้ำตาลมะพร้าว, ข้าวเกรียบ
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- -----------------------------------------------------------------
+               เมนูที่ 5: โซโตอายัม (Soto Ayam)
+               ----------------------------------------------------------------- -->
+          <article class="dish-card">
+            <!-- [ส่วนแก้ไขรูปภาพเมนูที่ 5] -->
+            <div class="dish-image-wrapper">
+              <img src="โซโตอายัม.jpg" 
+                   alt="ซุปโซโตอายัมน้ำซุปไก่สีเหลืองทองจากขมิ้นหอมกรุ่นเสิร์ฟพร้อมวุ้นเส้นและไข่ต้ม" 
+                   class="dish-image" 
+                   loading="lazy">
+            </div>
+            
+            <div class="dish-info">
+              <div class="dish-header">
+                <span class="dish-number">เมนูที่ 05 · AROMATIC CHICKEN SOUP</span>
+                <!-- [ส่วนแก้ไขชื่อไทย / ชื่อต้นฉบับ] -->
+                <h3 class="dish-title">โซโตอายัม</h3>
+                <div class="dish-original-name">Soto Ayam (Yellow Aromatic Chicken Soup)</div>
+              </div>
+
+              <div class="dish-details">
+                <!-- [ส่วนแก้ไขประวัติ/ที่มา] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ประวัติและที่มา:</span>
+                  <p class="dish-detail-desc">
+                    ซุปไก่สีเหลืองทองอันเป็น comfort food หมายเลขหนึ่งของครอบครัวชาวอินโดนีเซีย 
+                    พบได้เกือบทุกเกาะโดยมีสูตรเฉพาะตัว เช่น โซโตมาดูรา หรือโซโตเมดัน 
+                    คำว่า "Soto" สันนิษฐานว่ามีรากศัพท์จากอาหารต้มของจีนแคะ แต่ถูกปรุงแต่งใหม่ด้วยเครื่องเทศเขตร้อนอย่างสมบูรณ์แบบ
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขรสชาติ] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">เอกลักษณ์รสชาติ:</span>
+                  <p class="dish-detail-desc">
+                    น้ำซุปใสสีทอง รสชาติสดชื่น โล่งคอ หอมกลิ่นตะไคร้ ใบมะกรูด และขมิ้นชัน 
+                    ชูรสด้วยกระเทียมเจียวผง (Koya) รสเปรี้ยวมะนาวสด และความเผ็ดร้อนจากซัมบัลเข้มข้น
+                  </p>
+                </div>
+
+                <!-- [ส่วนแก้ไขส่วนผสมหลัก] -->
+                <div class="dish-detail-group">
+                  <span class="dish-detail-label">ส่วนผสมหลัก:</span>
+                  <p class="dish-detail-desc">
+                    ไก่ต้มฉีกเส้น, น้ำซุปเคี่ยวโครงไก่, ขมิ้นสด, ตะไคร้, ใบมะกรูด, วุ้นเส้น, 
+                    กะหล่ำปลีซอย, ไข่ต้ม, หอมเจียว, มะนาวผ่าซีก, ซัมบัลพริกสด
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- กล่องนำทางหน้าถัดไป -->
+        <div style="margin-top: 4.5rem; text-align: center; padding-top: 2.5rem; border-top: 1px solid var(--border-subtle);">
+          <span style="display: block; font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.75rem;">เดินทางสู่ดินแดนถัดไป</span>
+          <a href="turkey.html" class="btn btn-primary btn-arrow">สำรวจวัฒนธรรมอาหารตุรกี</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>รสชาติแห่งเอเชีย</h4>
+          <p>คัดสรรเมนูอาหารเอเชีย 4 ประเทศ ครบทั้งรสชาติ เอกลักษณ์ที่น่าค้นหา</p>
+        </div>
+        <div>
+          <div class="footer-nav-title">อาหาร 4 ประเทศ</div>
+          <ul class="footer-nav-links">
+            <li><a href="vietnam.html">อาหารเวียดนาม</a></li>
+            <li><a href="india.html">อาหารอินเดีย</a></li>
+            <li><a href="indonesia.html">อาหารอินโดนีเซีย</a></li>
+            <li><a href="turkey.html">อาหารตุรกี</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-nav-title">ข้อมูลโครงงาน</div>
+          <ul class="footer-nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 รสชาติแห่งเอเชีย - โครงงานพัฒนาเว็บไซต์รายวิชา Web Design For Information Work</p>
+        <p>พัฒนาด้วย Google AI Studio, HTML, CSS และ VS CODE</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
